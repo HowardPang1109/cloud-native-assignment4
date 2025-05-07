@@ -44,6 +44,24 @@ docker run -d -p 5000:5000 your_dockerhub_username/2025cloud:backend
 
 ---
 
+## 🧩 GitHub Actions 自動化流程整合
+
+- push 或 PR 時會自動觸發 `Build and Push Docker Images` workflow
+- 成功推送 image 至：
+  - `howard921109/2025cloud:frontend`
+  - `howard921109/2025cloud:backend`
+- Actions 記錄頁：[workflow 記錄](https://github.com/HowardPang1109/cloud-native-assignment4/actions)
+
+---
+
+## ✅ PR 測錯驗證
+
+
+
+- 故意在 Dockerfile 中將 `RUN apt-get` 改為 `RUN apt-getttt`，使得 build 無法成功。
+- GitHub Action 成功偵測錯誤並在 Actions log 中顯示錯誤訊息。
+
+
 ## 🤖 GitHub Action 自動化流程圖解
 
 ```mermaid
